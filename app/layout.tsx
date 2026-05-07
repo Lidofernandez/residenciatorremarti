@@ -9,8 +9,8 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 const _playfair = Playfair_Display({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
 export const metadata: Metadata = {
-  title: 'Golden Oaks Senior Living | Premium Retirement Community',
-  description: 'Discover exceptional retirement living at Golden Oaks. We offer independent living, assisted living, and memory care with personalized services in a warm, welcoming community.',
+  title: 'Residencia Torre Martí | Residència Sènior Premium',
+  description: 'Descobreix una vida de jubilació excepcional a Residència Torre Martí. Oferim vida independent, vida assistida i cura de memòria amb serveis personalitzats en una comunitat càlida i acollidora.',
   generator: 'v0.app',
   icons: {
     icon: [
