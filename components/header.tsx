@@ -24,7 +24,7 @@ export function Header() {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="font-serif text-2xl font-semibold text-primary">
-              Golden Oaks
+              Torre Martí
             </span>
           </Link>
         </div>
@@ -69,7 +69,7 @@ export function Header() {
             <div className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5">
                 <span className="font-serif text-2xl font-semibold text-primary">
-                  Golden Oaks
+                  Torre Martí
                 </span>
               </Link>
               <Button

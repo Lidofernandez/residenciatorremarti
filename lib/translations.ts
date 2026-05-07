@@ -17,7 +17,7 @@ export const translations = {
       comingSoon: "Próxima Apertura",
       tagline: "Residencia Senior Premium",
       title: "Donde Cada Día Se Siente Como Llegar a Casa",
-      description: "Estamos preparando una comunidad vibrante diseñada para la comodidad, la conexión y el cuidado. En Golden Oaks, ofreceremos una vida de jubilación excepcional con servicios personalizados que honran tu independencia mientras ofrecen tranquilidad.",
+      description: "Estamos preparando una comunidad vibrante diseñada para la comodidad, la conexión y el cuidado. En Residencia Torre Martí, ofreceremos una vida de jubilación excepcional con servicios personalizados que honran tu independencia mientras ofrecen tranquilidad.",
       requestInfo: "Suscríbete para más información",
       exploreAmenities: "Explorar Servicios",
     },
@@ -57,7 +57,7 @@ export const translations = {
     about: {
       tagline: "Sobre Nosotros",
       title: "Un Nuevo Proyecto con Vocación de Cuidado",
-      description1: "Golden Oaks nace con la misión de ser un referente en la vida senior. Nuestra comunidad está fundada con la creencia de que cada individuo merece vivir con dignidad, propósito y alegría sin importar la edad.",
+      description1: "Residencia Torre Martí nace con la misión de ser un referente en la vida senior. Nuestra comunidad está fundada con la creencia de que cada individuo merece vivir con dignidad, propósito y alegría sin importar la edad.",
       description2: "Estamos creando un ambiente donde los residentes se sentirán verdaderamente en casa, rodeados de personal cariñoso y maravillosos vecinos que se convertirán en familia.",
       highlights: [
         "Equipo con amplia experiencia en cuidado senior",
@@ -100,7 +100,7 @@ export const translations = {
       title: "Suscríbete para Recibir Información",
       description: "Estamos preparando todo para nuestra apertura. Déjanos tus datos y te mantendremos informado sobre las novedades, fechas de apertura y cómo reservar tu plaza.",
       visitUs: "Ubicación",
-      address: "123 Golden Oaks Lane\nSerenity Valley, CA 90210",
+      address: "Carrer de la Residència, 1\nBenicarló, 12580 Castelló",
       callUs: "Llámanos",
       phone: "(555) 123-4567",
       hours: "Horario de Atención",
@@ -115,7 +115,7 @@ export const translations = {
       submit: "Suscribirme",
       sending: "Enviando...",
       thankYou: "¡Gracias por tu interés!",
-      thankYouMessage: "Hemos recibido tu información. Te contactaremos cuando tengamos novedades sobre la apertura de Golden Oaks.",
+      thankYouMessage: "Hemos recibido tu información. Te contactaremos cuando tengamos novedades sobre la apertura de Residencia Torre Martí.",
       submitAnother: "Enviar Otra Consulta",
     },
     // Footer
@@ -137,7 +137,7 @@ export const translations = {
         termsOfService: "Términos de Servicio",
         accessibility: "Accesibilidad",
       },
-      copyright: "Golden Oaks Senior Living. Todos los derechos reservados.",
+      copyright: "Residencia Torre Martí. Tots els drets reservats.",
     },
     // Language names
     languages: {
@@ -161,7 +161,7 @@ export const translations = {
       comingSoon: "Propera Obertura",
       tagline: "Residència Sènior Premium",
       title: "On Cada Dia Sembla Arribar a Casa",
-      description: "Estem preparant una comunitat vibrant dissenyada per a la comoditat, la connexió i la cura. A Golden Oaks, oferirem una vida de jubilació excepcional amb serveis personalitzats que honoren la teva independència mentre ofereixen tranquil·litat.",
+      description: "Estem preparant una comunitat vibrant dissenyada per a la comoditat, la connexió i la cura. A Residència Torre Martí, oferirem una vida de jubilació excepcional amb serveis personalitzats que honoren la teva independència mentre ofereixen tranquil·litat.",
       requestInfo: "Subscriu-te per més informació",
       exploreAmenities: "Explorar Serveis",
     },
@@ -201,7 +201,7 @@ export const translations = {
     about: {
       tagline: "Sobre Nosaltres",
       title: "Un Nou Projecte amb Vocació de Cura",
-      description1: "Golden Oaks neix amb la missió de ser un referent en la vida sènior. La nostra comunitat està fundada amb la creença que cada individu mereix viure amb dignitat, propòsit i alegria sense importar l'edat.",
+      description1: "Residència Torre Martí neix amb la missió de ser un referent en la vida sènior. La nostra comunitat està fundada amb la creença que cada individu mereix viure amb dignitat, propòsit i alegria sense importar l'edat.",
       description2: "Estem creant un ambient on els residents se sentiran veritablement a casa, envoltats de personal afectuós i meravellosos veïns que es convertiran en família.",
       highlights: [
         "Equip amb àmplia experiència en cura sènior",
@@ -244,7 +244,7 @@ export const translations = {
       title: "Subscriu-te per Rebre Informació",
       description: "Estem preparant tot per a la nostra obertura. Deixa'ns les teves dades i et mantindrem informat sobre les novetats, dates d'obertura i com reservar la teva plaça.",
       visitUs: "Ubicació",
-      address: "123 Golden Oaks Lane\nSerenity Valley, CA 90210",
+      address: "Carrer de la Residència, 1\nBenicarló, 12580 Castelló",
       callUs: "Truca'ns",
       phone: "(555) 123-4567",
       hours: "Horari d'Atenció",
@@ -259,7 +259,7 @@ export const translations = {
       submit: "Subscriure'm",
       sending: "Enviant...",
       thankYou: "Gràcies pel teu interès!",
-      thankYouMessage: "Hem rebut la teva informació. Et contactarem quan tinguem novetats sobre l'obertura de Golden Oaks.",
+      thankYouMessage: "Hem rebut la teva informació. Et contactarem quan tinguem novetats sobre l'obertura de Residència Torre Martí.",
       submitAnother: "Enviar Una Altra Consulta",
     },
     // Footer
@@ -281,7 +281,7 @@ export const translations = {
         termsOfService: "Termes de Servei",
         accessibility: "Accessibilitat",
       },
-      copyright: "Golden Oaks Senior Living. Tots els drets reservats.",
+      copyright: "Residència Torre Martí. Tots els drets reservats.",
     },
     // Language names
     languages: {

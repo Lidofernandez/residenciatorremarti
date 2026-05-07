@@ -33,7 +33,7 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="font-serif text-2xl font-semibold">
-              Golden Oaks
+              Torre Martí
             </Link>
             <p className="mt-4 text-sm text-background/70 leading-relaxed">
               {t.footer.description}
