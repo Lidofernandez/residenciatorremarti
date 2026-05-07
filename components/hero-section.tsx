@@ -23,6 +23,15 @@ export function HeroSection() {
 
       <div className="relative mx-auto max-w-7xl px-6 py-32 lg:px-8 lg:py-40">
         <div className="mx-auto max-w-3xl text-center">
+          {/* Coming Soon Badge */}
+          <div className="inline-flex items-center rounded-full bg-accent/10 px-4 py-1.5 mb-6">
+            <span className="relative flex h-2 w-2 mr-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+            </span>
+            <span className="text-sm font-medium text-accent">{t.hero.comingSoon}</span>
+          </div>
+          
           <p className="text-sm font-medium uppercase tracking-widest text-accent">
             {t.hero.tagline}
           </p>

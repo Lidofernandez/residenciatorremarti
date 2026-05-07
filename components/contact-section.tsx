@@ -30,9 +30,15 @@ export function ContactSection() {
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24">
           {/* Content */}
           <div>
-            <p className="text-sm font-medium uppercase tracking-widest text-accent">
-              {t.contact.tagline}
-            </p>
+            {/* Coming Soon Badge */}
+            <div className="inline-flex items-center rounded-full bg-accent/10 px-4 py-1.5 mb-4">
+              <span className="relative flex h-2 w-2 mr-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+              </span>
+              <span className="text-sm font-medium text-accent">{t.contact.tagline}</span>
+            </div>
+            
             <h2 className="mt-2 font-serif text-3xl font-semibold tracking-tight text-foreground sm:text-4xl text-balance">
               {t.contact.title}
             </h2>
@@ -99,7 +105,7 @@ export function ContactSection() {
                       <Input
                         id="firstName"
                         name="firstName"
-                        placeholder="John"
+                        placeholder="María"
                         required
                         autoComplete="given-name"
                       />
@@ -109,23 +115,11 @@ export function ContactSection() {
                       <Input
                         id="lastName"
                         name="lastName"
-                        placeholder="Smith"
+                        placeholder="García López"
                         required
                         autoComplete="family-name"
                       />
                     </div>
-                  </div>
-                  
-                  <div className="flex flex-col gap-2">
-                    <Label htmlFor="email">{t.contact.email}</Label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      placeholder="john@example.com"
-                      required
-                      autoComplete="email"
-                    />
                   </div>
                   
                   <div className="flex flex-col gap-2">
@@ -134,35 +128,19 @@ export function ContactSection() {
                       id="phone"
                       name="phone"
                       type="tel"
-                      placeholder="(555) 123-4567"
+                      placeholder="+34 600 123 456"
+                      required
                       autoComplete="tel"
                     />
                   </div>
-
-                  <div className="flex flex-col gap-2">
-                    <Label htmlFor="interest">{t.contact.interest}</Label>
-                    <select
-                      id="interest"
-                      name="interest"
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                      required
-                    >
-                      <option value="">{t.contact.selectOption}</option>
-                      <option value="independent">{t.contact.independentLiving}</option>
-                      <option value="assisted">{t.contact.assistedLiving}</option>
-                      <option value="memory">{t.contact.memoryCare}</option>
-                      <option value="tour">{t.contact.scheduleTour}</option>
-                      <option value="general">{t.contact.generalInfo}</option>
-                    </select>
-                  </div>
                   
                   <div className="flex flex-col gap-2">
-                    <Label htmlFor="message">{t.contact.message}</Label>
+                    <Label htmlFor="questions">{t.contact.questions}</Label>
                     <Textarea
-                      id="message"
-                      name="message"
-                      placeholder={t.contact.messagePlaceholder}
-                      className="min-h-24 resize-none"
+                      id="questions"
+                      name="questions"
+                      placeholder={t.contact.questionsPlaceholder}
+                      className="min-h-32 resize-none"
                     />
                   </div>
                   
