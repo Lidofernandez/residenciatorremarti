@@ -12,7 +12,6 @@ import { useLanguage } from "@/lib/language-context"
 import type { Locale } from "@/lib/translations"
 
 const locales: { value: Locale; label: string }[] = [
-  { value: "en", label: "English" },
   { value: "es", label: "Español" },
   { value: "ca", label: "Català" },
 ]

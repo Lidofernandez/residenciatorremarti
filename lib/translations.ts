@@ -1,158 +1,6 @@
-export type Locale = "en" | "es" | "ca"
+export type Locale = "es" | "ca"
 
 export const translations = {
-  en: {
-    // Header
-    nav: {
-      about: "About",
-      amenities: "Amenities",
-      livingOptions: "Living Options",
-      contact: "Contact",
-      scheduleTour: "Schedule a Tour",
-      openMenu: "Open menu",
-      closeMenu: "Close menu",
-    },
-    // Hero
-    hero: {
-      tagline: "Premium Senior Living",
-      title: "Where Every Day Feels Like Coming Home",
-      description: "Discover a vibrant community designed for comfort, connection, and care. At Golden Oaks, we provide exceptional retirement living with personalized services that honor your independence while offering peace of mind.",
-      requestInfo: "Request Information",
-      exploreAmenities: "Explore Amenities",
-    },
-    // Features
-    features: {
-      tagline: "Our Amenities",
-      title: "Everything You Need for a Fulfilling Life",
-      description: "We provide comprehensive services and amenities designed to enhance your daily life.",
-      items: [
-        {
-          name: "24/7 Care Support",
-          description: "Our dedicated team is available around the clock to provide assistance whenever you need it.",
-        },
-        {
-          name: "Comfortable Living",
-          description: "Beautifully appointed apartments with modern amenities designed for comfort and accessibility.",
-        },
-        {
-          name: "Vibrant Community",
-          description: "Join a welcoming community of neighbors who share interests, activities, and meaningful connections.",
-        },
-        {
-          name: "Chef-Prepared Dining",
-          description: "Enjoy delicious, nutritious meals prepared fresh daily by our culinary team in our elegant dining room.",
-        },
-        {
-          name: "Wellness Programs",
-          description: "Stay active and healthy with fitness classes, therapy services, and personalized wellness plans.",
-        },
-        {
-          name: "Peace of Mind",
-          description: "Rest easy knowing your safety and security are our top priority with comprehensive safety features.",
-        },
-      ],
-    },
-    // About
-    about: {
-      tagline: "About Us",
-      title: "A Legacy of Compassionate Care",
-      description1: "For over two decades, Golden Oaks has been a trusted name in senior living. Our community was founded on the belief that every individual deserves to live with dignity, purpose, and joy regardless of age.",
-      description2: "We take pride in creating an environment where residents feel truly at home, surrounded by caring staff and wonderful neighbors who become like family.",
-      highlights: [
-        "Over 25 years of experience in senior care",
-        "Award-winning staff with specialized training",
-        "Family-owned and operated community",
-        "Located in a peaceful, scenic setting",
-      ],
-      yearsExcellence: "Years of Excellence",
-      happyResidents: "Happy Residents",
-      familySatisfaction: "Family Satisfaction",
-    },
-    // Living Options
-    living: {
-      tagline: "Living Options",
-      title: "Find Your Perfect Living Arrangement",
-      description: "We offer a range of living options to meet your unique needs and preferences.",
-      mostPopular: "Most Popular",
-      learnMore: "Learn More",
-      options: [
-        {
-          name: "Independent Living",
-          description: "Maintain your active lifestyle with the freedom you deserve. Enjoy maintenance-free living with access to community amenities and social activities.",
-          features: ["Private apartments", "Housekeeping services", "Social activities", "Transportation"],
-        },
-        {
-          name: "Assisted Living",
-          description: "Receive personalized support while maintaining independence. Our caring staff provides assistance with daily activities tailored to your needs.",
-          features: ["24/7 care staff", "Medication management", "Personal care assistance", "Wellness programs"],
-        },
-        {
-          name: "Memory Care",
-          description: "Specialized care for those with Alzheimer's or dementia. Our secure environment and trained staff provide compassionate, dignified care.",
-          features: ["Secure environment", "Specialized programming", "Trained caregivers", "Family support"],
-        },
-      ],
-    },
-    // Contact
-    contact: {
-      tagline: "Contact Us",
-      title: "Ready to Learn More?",
-      description: "We would love to hear from you. Fill out the form and our team will reach out to answer your questions and schedule a personalized tour of our community.",
-      visitUs: "Visit Us",
-      address: "123 Golden Oaks Lane\nSerenity Valley, CA 90210",
-      callUs: "Call Us",
-      phone: "(555) 123-4567",
-      hours: "Hours",
-      hoursText: "Tours available 7 days a week\n9:00 AM - 5:00 PM",
-      formTitle: "Request Information",
-      formDescription: "Fill out the form below and we will send you a brochure and contact you to schedule a tour.",
-      firstName: "First Name",
-      lastName: "Last Name",
-      email: "Email",
-      phoneLabel: "Phone Number",
-      interest: "I am interested in",
-      selectOption: "Select an option",
-      independentLiving: "Independent Living",
-      assistedLiving: "Assisted Living",
-      memoryCare: "Memory Care",
-      scheduleTour: "Schedule a Tour",
-      generalInfo: "General Information",
-      message: "Message (Optional)",
-      messagePlaceholder: "Tell us about your needs or questions...",
-      submit: "Request Information",
-      sending: "Sending...",
-      thankYou: "Thank You!",
-      thankYouMessage: "We have received your information and will be in touch within 24 hours to discuss how Golden Oaks can be your new home.",
-      submitAnother: "Submit Another Inquiry",
-    },
-    // Footer
-    footer: {
-      description: "Providing exceptional senior living experiences with compassion, dignity, and joy for over 25 years.",
-      community: "Community",
-      resources: "Resources",
-      legal: "Legal",
-      links: {
-        aboutUs: "About Us",
-        amenities: "Amenities",
-        livingOptions: "Living Options",
-        virtualTour: "Virtual Tour",
-        faq: "FAQ",
-        blog: "Blog",
-        careers: "Careers",
-        events: "Events",
-        privacyPolicy: "Privacy Policy",
-        termsOfService: "Terms of Service",
-        accessibility: "Accessibility",
-      },
-      copyright: "Golden Oaks Senior Living. All rights reserved.",
-    },
-    // Language names
-    languages: {
-      en: "English",
-      es: "Espa\u00f1ol",
-      ca: "Catal\u00e0",
-    },
-  },
   es: {
     // Header
     nav: {
@@ -299,10 +147,9 @@ export const translations = {
       copyright: "Golden Oaks Senior Living. Todos los derechos reservados.",
     },
     // Language names
-    languages: {
-      en: "English",
-      es: "Espa\u00f1ol",
-      ca: "Catal\u00e0",
+languages: {
+      es: "Español",
+      ca: "Català",
     },
   },
   ca: {
@@ -451,10 +298,9 @@ export const translations = {
       copyright: "Golden Oaks Senior Living. Tots els drets reservats.",
     },
     // Language names
-    languages: {
-      en: "English",
-      es: "Espa\u00f1ol",
-      ca: "Catal\u00e0",
+languages: {
+      es: "Español",
+      ca: "Català",
     },
   },
 } as const
