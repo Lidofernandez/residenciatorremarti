@@ -1,26 +1,31 @@
-import Link from "next/link"
+"use client"
 
-const footerLinks = {
-  community: [
-    { name: "About Us", href: "#about" },
-    { name: "Amenities", href: "#amenities" },
-    { name: "Living Options", href: "#living" },
-    { name: "Virtual Tour", href: "#" },
-  ],
-  resources: [
-    { name: "FAQ", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Careers", href: "#" },
-    { name: "Events", href: "#" },
-  ],
-  legal: [
-    { name: "Privacy Policy", href: "#" },
-    { name: "Terms of Service", href: "#" },
-    { name: "Accessibility", href: "#" },
-  ],
-}
+import Link from "next/link"
+import { useLanguage } from "@/lib/language-context"
 
 export function Footer() {
+  const { t } = useLanguage()
+
+  const footerLinks = {
+    community: [
+      { name: t.footer.links.aboutUs, href: "#about" },
+      { name: t.footer.links.amenities, href: "#amenities" },
+      { name: t.footer.links.livingOptions, href: "#living" },
+      { name: t.footer.links.virtualTour, href: "#" },
+    ],
+    resources: [
+      { name: t.footer.links.faq, href: "#" },
+      { name: t.footer.links.blog, href: "#" },
+      { name: t.footer.links.careers, href: "#" },
+      { name: t.footer.links.events, href: "#" },
+    ],
+    legal: [
+      { name: t.footer.links.privacyPolicy, href: "#" },
+      { name: t.footer.links.termsOfService, href: "#" },
+      { name: t.footer.links.accessibility, href: "#" },
+    ],
+  }
+
   return (
     <footer className="bg-foreground text-background">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
@@ -31,8 +36,7 @@ export function Footer() {
               Golden Oaks
             </Link>
             <p className="mt-4 text-sm text-background/70 leading-relaxed">
-              Providing exceptional senior living experiences with compassion, 
-              dignity, and joy for over 25 years.
+              {t.footer.description}
             </p>
           </div>
 
@@ -40,7 +44,7 @@ export function Footer() {
           <div className="grid grid-cols-3 gap-8 lg:col-span-3">
             <div>
               <h3 className="text-sm font-semibold uppercase tracking-wider">
-                Community
+                {t.footer.community}
               </h3>
               <ul className="mt-4 flex flex-col gap-3">
                 {footerLinks.community.map((link) => (
@@ -57,7 +61,7 @@ export function Footer() {
             </div>
             <div>
               <h3 className="text-sm font-semibold uppercase tracking-wider">
-                Resources
+                {t.footer.resources}
               </h3>
               <ul className="mt-4 flex flex-col gap-3">
                 {footerLinks.resources.map((link) => (
@@ -74,7 +78,7 @@ export function Footer() {
             </div>
             <div>
               <h3 className="text-sm font-semibold uppercase tracking-wider">
-                Legal
+                {t.footer.legal}
               </h3>
               <ul className="mt-4 flex flex-col gap-3">
                 {footerLinks.legal.map((link) => (
@@ -94,7 +98,7 @@ export function Footer() {
 
         <div className="mt-12 border-t border-background/20 pt-8">
           <p className="text-center text-sm text-background/60">
-            &copy; {new Date().getFullYear()} Golden Oaks Senior Living. All rights reserved.
+            &copy; {new Date().getFullYear()} {t.footer.copyright}
           </p>
         </div>
       </div>

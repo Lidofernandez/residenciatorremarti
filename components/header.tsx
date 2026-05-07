@@ -4,16 +4,19 @@ import { useState } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
-
-const navigation = [
-  { name: "About", href: "#about" },
-  { name: "Amenities", href: "#amenities" },
-  { name: "Living Options", href: "#living" },
-  { name: "Contact", href: "#contact" },
-]
+import { LanguageSwitcher } from "@/components/language-switcher"
+import { useLanguage } from "@/lib/language-context"
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const { t } = useLanguage()
+
+  const navigation = [
+    { name: t.nav.about, href: "#about" },
+    { name: t.nav.amenities, href: "#amenities" },
+    { name: t.nav.livingOptions, href: "#living" },
+    { name: t.nav.contact, href: "#contact" },
+  ]
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
@@ -25,12 +28,13 @@ export function Header() {
             </span>
           </Link>
         </div>
-        <div className="flex lg:hidden">
+        <div className="flex items-center gap-2 lg:hidden">
+          <LanguageSwitcher />
           <Button
             variant="ghost"
             size="icon"
             onClick={() => setMobileMenuOpen(true)}
-            aria-label="Open menu"
+            aria-label={t.nav.openMenu}
           >
             <Menu className="size-6" />
           </Button>
@@ -46,9 +50,10 @@ export function Header() {
             </Link>
           ))}
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-4">
+          <LanguageSwitcher />
           <Button asChild>
-            <Link href="#contact">Schedule a Tour</Link>
+            <Link href="#contact">{t.nav.scheduleTour}</Link>
           </Button>
         </div>
       </nav>
@@ -71,7 +76,7 @@ export function Header() {
                 variant="ghost"
                 size="icon"
                 onClick={() => setMobileMenuOpen(false)}
-                aria-label="Close menu"
+                aria-label={t.nav.closeMenu}
               >
                 <X className="size-6" />
               </Button>
@@ -90,7 +95,7 @@ export function Header() {
                 ))}
                 <Button asChild className="mt-4">
                   <Link href="#contact" onClick={() => setMobileMenuOpen(false)}>
-                    Schedule a Tour
+                    {t.nav.scheduleTour}
                   </Link>
                 </Button>
               </div>
