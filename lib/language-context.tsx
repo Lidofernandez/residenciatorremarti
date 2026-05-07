@@ -7,18 +7,21 @@ type LanguageContextType = {
   locale: Locale
   setLocale: (locale: Locale) => void
   t: Translations
+  isHydrated: boolean
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [locale, setLocale] = useState<Locale>("es")
+  const [isHydrated, setIsHydrated] = useState(false)
 
   useEffect(() => {
     const savedLocale = localStorage.getItem("locale") as Locale | null
     if (savedLocale && translations[savedLocale]) {
       setLocale(savedLocale)
     }
+    setIsHydrated(true)
   }, [])
 
   const handleSetLocale = (newLocale: Locale) => {
@@ -32,6 +35,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
         locale,
         setLocale: handleSetLocale,
         t: translations[locale],
+        isHydrated,
       }}
     >
       {children}
