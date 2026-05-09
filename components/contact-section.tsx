@@ -85,12 +85,6 @@ export function ContactSection() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold text-foreground">{t.contact.callUs}</h3>
-                <p className="mt-1 text-muted-foreground">
-                  {t.contact.phone}
-                </p>
-              </div>
-              <div>
                 <h3 className="font-semibold text-foreground">{t.contact.hours}</h3>
                 <p className="mt-1 text-muted-foreground whitespace-pre-line">
                   {t.contact.hoursText}
