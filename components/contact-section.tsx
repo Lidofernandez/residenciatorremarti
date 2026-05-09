@@ -116,6 +116,7 @@ export function ContactSection() {
                   onClick={() => {
                     setIsSubmitted(false)
                     setServiceInterest("")
+                    setSubmitError("")
                   }}
                   className="mt-6"
                 >
