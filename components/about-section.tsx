@@ -46,11 +46,11 @@ export function AboutSection() {
             </div>
             {/* Decorative cards */}
             <div className="absolute -bottom-6 -left-6 rounded-xl bg-card p-6 shadow-lg border border-border">
-              <div className="font-serif text-3xl font-bold text-primary">500+</div>
+              <div className="font-serif text-3xl font-bold text-primary">100+</div>
               <div className="text-sm text-muted-foreground">{t.about.happyResidents}</div>
             </div>
             <div className="absolute -top-6 -right-6 rounded-xl bg-card p-6 shadow-lg border border-border">
-              <div className="font-serif text-3xl font-bold text-accent">98%</div>
+              <div className="font-serif text-3xl font-bold text-accent">100%</div>
               <div className="text-sm text-muted-foreground">{t.about.familySatisfaction}</div>
             </div>
           </div>
