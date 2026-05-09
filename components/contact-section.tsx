@@ -34,6 +34,7 @@ export function ContactSection() {
     const data = {
       firstName: (form.elements.namedItem("firstName") as HTMLInputElement).value,
       lastName: (form.elements.namedItem("lastName") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
       phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
       serviceInterest,
       questions: (form.elements.namedItem("questions") as HTMLTextAreaElement).value,
@@ -154,6 +155,18 @@ export function ContactSection() {
                         autoComplete="family-name"
                       />
                     </div>
+                  </div>
+
+                  <div className="flex flex-col gap-2">
+                    <Label htmlFor="email">{t.contact.emailLabel}</Label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="you@example.com"
+                      required
+                      autoComplete="email"
+                    />
                   </div>
 
                   <div className="flex flex-col gap-2">

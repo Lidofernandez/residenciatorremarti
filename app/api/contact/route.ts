@@ -3,7 +3,8 @@ import { Resend } from "resend"
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
-const RECIPIENT = "info@contact.residenciatorremarti.es"
+const RECIPIENT = "lidofernandezburgos@gmail.com"
+const FROM_EMAIL  = "info@contact.residenciatorremarti.es"
 
 export async function POST(request: Request) {
   let body: unknown
@@ -13,20 +14,22 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid request body" }, { status: 400 })
   }
 
-  const { firstName, lastName, phone, serviceInterest, questions } = body as Record<string, string>
+  const { firstName, lastName, email, phone, serviceInterest, questions } = body as Record<string, string>
 
-  if (!firstName || !lastName || !phone || !serviceInterest) {
+  if (!firstName || !lastName || !email || !phone || !serviceInterest) {
     return NextResponse.json({ error: "Missing required fields" }, { status: 422 })
   }
 
   const { error } = await resend.emails.send({
-    from: "Formulario Torre Martí <onboarding@resend.dev>",
+    from: `Formulario Torre Martí <${FROM_EMAIL}>`,
     to: RECIPIENT,
+    replyTo: email,
     subject: `Nueva consulta: ${serviceInterest} — ${firstName} ${lastName}`,
     html: `
       <h2>Nueva consulta de la web</h2>
       <table cellpadding="8" style="border-collapse:collapse;width:100%;max-width:600px">
         <tr><td><strong>Nombre</strong></td><td>${firstName} ${lastName}</td></tr>
+        <tr><td><strong>Email</strong></td><td>${email}</td></tr>
         <tr><td><strong>Teléfono</strong></td><td>${phone}</td></tr>
         <tr><td><strong>Tipo de estancia</strong></td><td>${serviceInterest}</td></tr>
         ${questions ? `<tr><td><strong>Consulta</strong></td><td style="white-space:pre-wrap">${questions}</td></tr>` : ""}
