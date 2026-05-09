@@ -11,7 +11,7 @@ export function Footer() {
       { name: t.footer.links.aboutUs, href: "#about" },
       { name: t.footer.links.amenities, href: "#amenities" },
       { name: t.footer.links.livingOptions, href: "#living" },
-      { name: t.footer.links.virtualTour, href: "#" },
+
     ],
     resources: [
       { name: t.footer.links.faq, href: "#" },
