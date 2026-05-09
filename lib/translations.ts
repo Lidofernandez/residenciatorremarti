@@ -1,5 +1,13 @@
 export type Locale = "es" | "ca"
 
+type DeepTranslateValue<T> = T extends string
+  ? string
+  : T extends readonly (infer Item)[]
+    ? readonly DeepTranslateValue<Item>[]
+    : T extends object
+      ? { [Key in keyof T]: DeepTranslateValue<T[Key]> }
+      : T
+
 export const translations = {
   es: {
     // Header
@@ -110,6 +118,18 @@ export const translations = {
       firstName: "Nombre",
       lastName: "Apellidos",
       phoneLabel: "Número de Teléfono",
+      serviceInterest: "Tipo de estancia de interés",
+      serviceInterestPlaceholder: "Selecciona una opción",
+      stayTypes: {
+        longTermLabel: "Tipos de estancias",
+        temporaryLabel: "Estancias temporales",
+        indefiniteStay: "Estancia indefinida",
+        dayCenterStay: "Estancia de centro de día",
+        recoveryStay: "Convalecencia",
+        postSurgeryRehab: "Rehabilitación postquirúrgica o traumática",
+        familyRespite: "Respiro familiar",
+        specificDayVacation: "Vacaciones por días concretos",
+      },
       questions: "¿Tienes alguna pregunta?",
       questionsPlaceholder: "Cuéntanos tus dudas o preguntas sobre la residencia...",
       submit: "Suscribirme",
@@ -254,6 +274,18 @@ export const translations = {
       firstName: "Nom",
       lastName: "Cognoms",
       phoneLabel: "Número de Telèfon",
+      serviceInterest: "Tipus d'estada d'interès",
+      serviceInterestPlaceholder: "Selecciona una opció",
+      stayTypes: {
+        longTermLabel: "Tipus d'estades",
+        temporaryLabel: "Estades temporals",
+        indefiniteStay: "Estada indefinida",
+        dayCenterStay: "Estada de centre de dia",
+        recoveryStay: "Convalescència",
+        postSurgeryRehab: "Rehabilitació postquirúrgica o traumàtica",
+        familyRespite: "Respir familiar",
+        specificDayVacation: "Vacances per dies concrets",
+      },
       questions: "Tens alguna pregunta?",
       questionsPlaceholder: "Explica'ns els teus dubtes o preguntes sobre la residència...",
       submit: "Subscriure'm",
@@ -291,4 +323,4 @@ export const translations = {
   },
 } as const
 
-export type Translations = typeof translations.es
+export type Translations = DeepTranslateValue<typeof translations.es>

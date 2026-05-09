@@ -5,12 +5,23 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectSeparator,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 import { CheckCircle } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 
 export function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [serviceInterest, setServiceInterest] = useState("")
   const { t } = useLanguage()
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -83,7 +94,10 @@ export function ContactSection() {
                 </p>
                 <Button
                   variant="outline"
-                  onClick={() => setIsSubmitted(false)}
+                  onClick={() => {
+                    setIsSubmitted(false)
+                    setServiceInterest("")
+                  }}
                   className="mt-6"
                 >
                   {t.contact.submitAnother}
@@ -132,6 +146,48 @@ export function ContactSection() {
                       required
                       autoComplete="tel"
                     />
+                  </div>
+
+                  <div className="flex flex-col gap-2">
+                    <Label htmlFor="serviceInterest">{t.contact.serviceInterest}</Label>
+                    <input
+                      type="hidden"
+                      name="serviceInterest"
+                      value={serviceInterest}
+                      required
+                    />
+                    <Select value={serviceInterest} onValueChange={setServiceInterest}>
+                      <SelectTrigger id="serviceInterest" className="w-full">
+                        <SelectValue placeholder={t.contact.serviceInterestPlaceholder} />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectGroup>
+                          <SelectLabel>{t.contact.stayTypes.longTermLabel}</SelectLabel>
+                          <SelectItem value={t.contact.stayTypes.indefiniteStay}>
+                            {t.contact.stayTypes.indefiniteStay}
+                          </SelectItem>
+                          <SelectItem value={t.contact.stayTypes.dayCenterStay}>
+                            {t.contact.stayTypes.dayCenterStay}
+                          </SelectItem>
+                        </SelectGroup>
+                        <SelectSeparator />
+                        <SelectGroup>
+                          <SelectLabel>{t.contact.stayTypes.temporaryLabel}</SelectLabel>
+                          <SelectItem value={t.contact.stayTypes.recoveryStay}>
+                            {t.contact.stayTypes.recoveryStay}
+                          </SelectItem>
+                          <SelectItem value={t.contact.stayTypes.postSurgeryRehab}>
+                            {t.contact.stayTypes.postSurgeryRehab}
+                          </SelectItem>
+                          <SelectItem value={t.contact.stayTypes.familyRespite}>
+                            {t.contact.stayTypes.familyRespite}
+                          </SelectItem>
+                          <SelectItem value={t.contact.stayTypes.specificDayVacation}>
+                            {t.contact.stayTypes.specificDayVacation}
+                          </SelectItem>
+                        </SelectGroup>
+                      </SelectContent>
+                    </Select>
                   </div>
                   
                   <div className="flex flex-col gap-2">
