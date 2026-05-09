@@ -137,6 +137,7 @@ export const translations = {
       thankYou: "¡Gracias por tu interés!",
       thankYouMessage: "Hemos recibido tu información. Te contactaremos cuando tengamos novedades sobre la apertura de Residencia Torre Martí.",
       submitAnother: "Enviar Otra Consulta",
+      submitError: "Ha ocurrido un error. Por favor, inténtalo de nuevo.",
     },
     // Footer
     footer: {
@@ -292,6 +293,7 @@ export const translations = {
       thankYou: "Gràcies pel teu interès!",
       thankYouMessage: "Hem rebut la teva informació. Et contactarem quan tinguem novetats sobre l'obertura de Residència Torre Martí.",
       submitAnother: "Enviar Una Altra Consulta",
+      submitError: "S'ha produït un error. Si us plau, torna-ho a intentar.",
     },
     // Footer
     footer: {

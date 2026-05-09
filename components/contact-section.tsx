@@ -22,17 +22,36 @@ export function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [serviceInterest, setServiceInterest] = useState("")
+  const [submitError, setSubmitError] = useState("")
   const { t } = useLanguage()
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setIsSubmitting(true)
-    
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+    setSubmitError("")
+
+    const form = e.currentTarget
+    const data = {
+      firstName: (form.elements.namedItem("firstName") as HTMLInputElement).value,
+      lastName: (form.elements.namedItem("lastName") as HTMLInputElement).value,
+      phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
+      serviceInterest,
+      questions: (form.elements.namedItem("questions") as HTMLTextAreaElement).value,
+    }
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      })
+      if (!res.ok) throw new Error("server_error")
+      setIsSubmitted(true)
+    } catch {
+      setSubmitError(t.contact.submitError)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -49,7 +68,7 @@ export function ContactSection() {
               </span>
               <span className="text-sm font-medium text-accent">{t.contact.tagline}</span>
             </div>
-            
+
             <h2 className="mt-2 font-serif text-3xl font-semibold tracking-tight text-foreground sm:text-4xl text-balance">
               {t.contact.title}
             </h2>
@@ -135,7 +154,7 @@ export function ContactSection() {
                       />
                     </div>
                   </div>
-                  
+
                   <div className="flex flex-col gap-2">
                     <Label htmlFor="phone">{t.contact.phoneLabel}</Label>
                     <Input
@@ -189,7 +208,7 @@ export function ContactSection() {
                       </SelectContent>
                     </Select>
                   </div>
-                  
+
                   <div className="flex flex-col gap-2">
                     <Label htmlFor="questions">{t.contact.questions}</Label>
                     <Textarea
@@ -199,8 +218,8 @@ export function ContactSection() {
                       className="min-h-32 resize-none"
                     />
                   </div>
-                  
-                  <Button type="submit" className="w-full" disabled={isSubmitting}>
+
+                  <Button type="submit" className="w-full" disabled={isSubmitting || !serviceInterest}>
                     {isSubmitting ? (
                       <>
                         <svg
@@ -229,6 +248,10 @@ export function ContactSection() {
                       t.contact.submit
                     )}
                   </Button>
+
+                  {submitError && (
+                    <p className="text-sm text-destructive text-center">{submitError}</p>
+                  )}
                 </form>
               </>
             )}
