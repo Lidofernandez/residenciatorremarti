@@ -3,7 +3,7 @@ import { Resend } from "resend"
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
-const RECIPIENT = "info@residenciatorremarti.es"
+const RECIPIENT = "info@contact.residenciatorremarti.es"
 
 export async function POST(request: Request) {
   let body: unknown
